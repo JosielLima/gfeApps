@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800;900&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
@@ -43,6 +43,20 @@
   --color-border-brand:    var(--color-brand-700);    /* #4338CA */
   --color-border-error:    var(--color-red-600);      /* #DC2626 */
   --color-border-disabled: var(--color-neutral-200);  /* #E6E6E6 */
+
+  /* ─── Vocabulário Stitch (Home) ──────────────────────────── */
+  --color-primary:            #4338CA;  /* Indigo-700 */
+  --color-on-background:      #171717;  /* Neutral-900 */
+  --color-background:         #fafafa;  /* Neutral-50 */
+  --color-surface:            #ffffff;
+  --color-surface-container:  #f5f5f5;
+  --color-surface-variant:    #e5e5e5;  /* Neutral-200 */
+  --color-on-surface-variant: #525252;  /* Neutral-600 */
+  --color-outline:            #a3a3a3;  /* Neutral-400 */
+
+  /* ─── Acento Home ────────────────────────────────────────── */
+  --color-brand-lime: #CCFF00;
+  --color-lime-accent: #CCFF00;  /* alias legado */
 }
 
 * {
@@ -138,4 +152,47 @@ pre code {
 .site-footer {
   border-top: 1px solid var(--color-border-primary);
   background-color: var(--color-bg-secondary);
+}
+
+/* ─── Home page utilities ─────────────────────────────────── */
+.grid-overlay {
+  background-image: radial-gradient(circle, #a3a3a3 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.1;
+}
+
+.stagger-1 { margin-top: 0; }
+.stagger-2 { margin-top: 4rem; }
+.stagger-3 { margin-top: 8rem; }
+
+@keyframes dash {
+  to { stroke-dashoffset: 0; }
+}
+
+.treasure-path {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 1000;
+  animation: dash 30s linear infinite;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  -webkit-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
 }

@@ -1,84 +1,114 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from "@tanstack/react-router";
+import ChallengeCard from "@/components/ChallengeCard";
+import { challenges } from "@/lib/challenges";
 
-export const Route = createFileRoute('/')({ component: App })
+export const Route = createFileRoute("/")({ component: HomePage });
 
-function App() {
-  return (
-    <main className="page-wrap px-4 pb-8 pt-14">
-      <section className="relative overflow-hidden rounded-[2rem] border border-border-primary bg-bg-secondary px-6 py-10 sm:px-10 sm:py-14">
-        <p className="mb-3 text-xs font-bold uppercase tracking-widest text-fg-tertiary">TanStack Start Base Template</p>
-        <h1 className="mb-5 max-w-3xl text-4xl font-bold leading-[1.02] tracking-tight text-fg-primary sm:text-6xl">
-          Start simple, ship quickly.
-        </h1>
-        <p className="mb-8 max-w-2xl text-base text-fg-secondary sm:text-lg">
-          This base starter intentionally keeps things light: two routes, clean
-          structure, and the essentials you need to build from scratch.
-        </p>
-        <div className="flex flex-wrap gap-3">
-          <a
-            href="/about"
-            className="rounded-full border border-brand-700 bg-bg-brand px-5 py-2.5 text-sm font-semibold text-fg-on-brand no-underline transition hover:-translate-y-0.5 hover:bg-brand-800"
-          >
-            About This Starter
-          </a>
-          <a
-            href="https://tanstack.com/router"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-border-strong bg-bg-primary px-5 py-2.5 text-sm font-semibold text-fg-primary no-underline transition hover:-translate-y-0.5 hover:border-border-strong"
-          >
-            Router Guide
-          </a>
-        </div>
-      </section>
+function HomePage() {
+	return (
+		<>
+			{/* ── Hero ─────────────────────────────────────────────── */}
+			<section
+				className="relative pt-32 pb-20 px-6 md:px-20 overflow-hidden"
+				aria-labelledby="hero-heading"
+			>
+				{/* Dot grid overlay */}
+				<div className="absolute inset-0 grid-overlay" aria-hidden="true" />
 
-      <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {[
-          [
-            'Type-Safe Routing',
-            'Routes and links stay in sync across every page.',
-          ],
-          [
-            'Server Functions',
-            'Call server code from your UI without creating API boilerplate.',
-          ],
-          [
-            'Streaming by Default',
-            'Ship progressively rendered responses for faster experiences.',
-          ],
-          [
-            'Tailwind Native',
-            'Design quickly with utility-first styling and reusable tokens.',
-          ],
-        ].map(([title, desc]) => (
-          <article
-            key={title}
-            className="rounded-2xl border border-border-primary bg-bg-secondary p-5"
-          >
-            <h2 className="mb-2 text-base font-semibold text-fg-primary">
-              {title}
-            </h2>
-            <p className="m-0 text-sm text-fg-secondary">{desc}</p>
-          </article>
-        ))}
-      </section>
+				<div className="relative z-10 flex flex-col md:flex-row items-end justify-between gap-8">
+					{/* Left block */}
+					<div className="max-w-4xl">
+						<p className="text-sm uppercase tracking-widest text-primary font-bold mb-4">
+							Expedition: Josiel Lima
+						</p>
+						<h1
+							id="hero-heading"
+							className="text-6xl md:text-9xl font-black tracking-tighter leading-[0.8] text-on-background [text-wrap:balance]"
+						>
+							GREATFRONT PROJECTS <br />
+							<span className="text-outline uppercase">
+								Component Tracks App
+							</span>
+						</h1>
+					</div>
 
-      <section className="mt-8 rounded-2xl border border-border-primary bg-bg-secondary p-6">
-        <p className="mb-2 text-xs font-bold uppercase tracking-widest text-fg-tertiary">Quick Start</p>
-        <ul className="m-0 list-disc space-y-2 pl-5 text-sm text-fg-secondary">
-          <li>
-            Edit <code>src/routes/index.tsx</code> to customize the home page.
-          </li>
-          <li>
-            Update <code>src/components/Header.tsx</code> and{' '}
-            <code>src/components/Footer.tsx</code> for brand links.
-          </li>
-          <li>
-            Add routes in <code>src/routes</code> and tweak visual tokens in{' '}
-            <code>src/styles.css</code>.
-          </li>
-        </ul>
-      </section>
-    </main>
-  )
+					{/* Right tagline — desktop only */}
+					<div className="text-[10px] uppercase tracking-[0.2em] font-bold text-right border-l-4 border-on-background pl-6 max-w-xs leading-relaxed hidden md:block">
+						Mapping the technical landscape through brutalist iteration. Each
+						node represents a leap in UI complexity.
+					</div>
+				</div>
+			</section>
+
+			{/* ── Grid de desafios + SVG trail ─────────────────────── */}
+			<main
+				className="relative px-6 md:px-20 pb-40"
+				aria-label="Lista de desafios"
+			>
+				{/* Animated treasure map trail */}
+				<div
+					aria-hidden="true"
+					className="absolute inset-0 pointer-events-none z-0 overflow-hidden"
+				>
+					<svg
+						aria-hidden="true"
+						className="w-full h-full"
+						viewBox="0 0 1200 2400"
+						preserveAspectRatio="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							className="treasure-path"
+							d="M 200 200 L 600 250 L 1000 200 L 1000 600 L 600 650 L 200 600 L 200 1000 L 600 1050 L 1000 1000 L 1000 1400 L 600 1450 L 200 1400 L 200 1800 L 600 1850 L 1000 1800"
+							fill="none"
+							stroke="#CCFF00"
+							strokeWidth="12"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+						/>
+					</svg>
+				</div>
+
+				{/* Cards grid */}
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-32 gap-x-12 relative z-10">
+					{challenges.map((challenge, index) => (
+						<ChallengeCard
+							key={challenge.id}
+							challenge={challenge}
+							index={index}
+						/>
+					))}
+				</div>
+			</main>
+
+			{/* ── Floating action buttons ───────────────────────────── */}
+			<div className="fixed bottom-10 right-10 z-50 flex flex-col gap-4">
+				<button
+					type="button"
+					aria-label="Abrir visualização de mapa"
+					className="w-16 h-16 bg-on-background text-background flex items-center justify-center border-4 border-brand-lime hover:bg-brand-lime hover:text-on-background transition-all active:scale-95 shadow-xl focus-visible:ring-4 focus-visible:ring-brand-lime outline-none cursor-pointer"
+				>
+					<span
+						className="material-symbols-outlined text-3xl"
+						aria-hidden="true"
+					>
+						map
+					</span>
+				</button>
+				<button
+					type="button"
+					aria-label="Voltar ao topo"
+					onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+					className="w-16 h-16 bg-background text-on-background flex items-center justify-center border-4 border-on-background hover:bg-on-background hover:text-background transition-all active:scale-95 focus-visible:ring-4 focus-visible:ring-primary outline-none cursor-pointer"
+				>
+					<span
+						className="material-symbols-outlined text-3xl"
+						aria-hidden="true"
+					>
+						arrow_upward
+					</span>
+				</button>
+			</div>
+		</>
+	);
 }

@@ -3,7 +3,12 @@
     "allow": [
       "Bash(openspec new:*)",
       "Bash(openspec status:*)",
-      "Bash(openspec instructions:*)"
+      "Bash(openspec instructions:*)",
+      "WebFetch(domain:contribution.usercontent.google.com)",
+      "mcp__stitch__get_screen",
+      "Bash(curl -sL \"https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2E3YWM2N2E1ZTk4NDRlMTU4MTE3Y2E2NWRjMmRkNGEyEgsSBxDfpf-5_QcYAZIBIwoKcHJvamVjdF9pZBIVQhMyMzE5MTM3Nzc0NzIzNDE0MzUz&filename=&opi=89354086\" -o /tmp/stitch_home.html)",
+      "Read(//tmp/**)",
+      "Bash(npm run:*)"
     ]
   }
 }
