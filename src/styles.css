@@ -170,9 +170,9 @@ pre code {
 }
 
 .treasure-path {
-  stroke-dasharray: 20;
+  stroke-dasharray: 18;
   stroke-dashoffset: 1000;
-  animation: dash 30s linear infinite;
+  animation: dash 40s linear infinite;
 }
 
 .tabular-nums {

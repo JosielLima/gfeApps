@@ -385,7 +385,7 @@ Substitui ESLint e Prettier. Configuração em `biome.json`:
 | Editar `routeTree.gen.ts`             | Arquivo auto-gerado pelo plugin — será sobrescrito      | Deixe o TanStack Router Plugin gerar automaticamente ao salvar as rotas |
 | Usar `tailwind.config.js`             | Tailwind v4 não usa esse arquivo                        | Defina tokens em `src/styles.css` dentro de `@theme { ... }`            |
 
----
+| Prirozar type no lugar de interface. Type é nosso padrão.
 
 ## 📝 Comandos
 

@@ -59,10 +59,10 @@ function HomePage() {
 					>
 						<path
 							className="treasure-path"
-							d="M 200 200 L 600 250 L 1000 200 L 1000 600 L 600 650 L 200 600 L 200 1000 L 600 1050 L 1000 1000 L 1000 1400 L 600 1450 L 200 1400 L 200 1800 L 600 1850 L 1000 1800"
+							d="M 200 200 L 600 250 L 1000 350 L 900 500 L 600 750 L 200 600 L 200 1000 L 600 1050 L 1000 1000 L 1000 1400 L 600 1450 L 200 1200 L 200 2800 L 800 1850 L 1000 2100"
 							fill="none"
-							stroke="#CCFF00"
-							strokeWidth="12"
+							stroke="#4338ca"
+							strokeWidth="9"
 							strokeLinecap="round"
 							strokeLinejoin="round"
 						/>
