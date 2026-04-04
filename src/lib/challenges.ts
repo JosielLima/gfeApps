@@ -1,6 +1,6 @@
 export type Difficulty = "Starter" | "Mid" | "Senior" | "Nightmare";
 
-export interface ChallengeData {
+export type ChallengeData = {
 	id: number;
 	number: string;
 	title: string;
@@ -9,7 +9,7 @@ export interface ChallengeData {
 	premium: boolean;
 	route: string;
 	components: string[];
-}
+};
 
 export const challenges: ChallengeData[] = [
 	{

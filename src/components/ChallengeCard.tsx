@@ -8,12 +8,12 @@ const difficultyBadge: Record<Difficulty, string> = {
 	Nightmare: "bg-red-600 text-white",
 };
 
-interface ChallengeCardProps {
+type ChallengeCardProps = {
 	/** Challenge data from the static list */
 	challenge: ChallengeData;
 	/** 0-based index in the challenges array — used for stagger and position */
 	index: number;
-}
+};
 
 export default function ChallengeCard({
 	challenge,
@@ -45,7 +45,7 @@ export default function ChallengeCard({
 					"absolute -top-14 font-black text-9xl z-20",
 					"transition-transform group-hover:-translate-y-2 tabular-nums",
 					numberOnLeft ? "-left-4" : "-right-4",
-					isLast ? "text-brand-lime" : "text-on-background",
+					isLast ? "text-primary" : "text-on-background",
 				].join(" ")}
 			>
 				{challenge.number}
@@ -56,8 +56,8 @@ export default function ChallengeCard({
 				className={[
 					"p-8 pt-16 flex flex-col h-full relative overflow-hidden",
 					isLast
-						? "bg-[#171717] border-4 border-brand-lime group-hover:bg-[#1f1f1f] transition-colors shadow-2xl"
-						: "bg-surface border-4 border-on-background/20 group-hover:border-on-background transition-colors",
+						? "bg-surface border-4 border- group-hover:bg-[#333333] transition-colors shadow-2xl"
+						: "bg-surface border-4 border-on-background/20 group-hover:border-on-background/30 transition-colors",
 				].join(" ")}
 			>
 				{/* Difficulty badge — absolutely positioned */}
@@ -75,7 +75,7 @@ export default function ChallengeCard({
 				<h3
 					className={[
 						"text-3xl font-black mb-4 leading-none uppercase",
-						isLast ? "text-white" : "text-on-background",
+						isLast ? "text-primary" : "text-on-background",
 					].join(" ")}
 				>
 					{challenge.title}

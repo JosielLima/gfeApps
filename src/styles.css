@@ -162,8 +162,13 @@ pre code {
 }
 
 .stagger-1 { margin-top: 0; }
-.stagger-2 { margin-top: 4rem; }
-.stagger-3 { margin-top: 8rem; }
+.stagger-2 { margin-top: 0; }
+.stagger-3 { margin-top: 0; }
+
+@media (min-width: 768px) {
+  .stagger-2 { margin-top: 4rem; }
+  .stagger-3 { margin-top: 8rem; }
+}
 
 @keyframes dash {
   to { stroke-dashoffset: 0; }

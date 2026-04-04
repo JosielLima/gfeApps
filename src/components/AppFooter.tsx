@@ -9,18 +9,12 @@ export default function AppFooter() {
 				<span className="text-[10px] font-black uppercase tracking-widest text-brand-lime">
 					STATUS: OPERATIONAL
 				</span>
-				<button
-					type="button"
-					className="text-[10px] font-bold uppercase tracking-widest text-background/60 hover:text-primary cursor-pointer focus-visible:ring-1 focus-visible:ring-brand-lime outline-none bg-transparent border-none p-0"
-				>
+				<span className="text-[10px] font-bold uppercase tracking-widest text-background/60">
 					LOC: BRAZIL
-				</button>
-				<button
-					type="button"
-					className="text-[10px] font-bold uppercase tracking-widest text-background/60 hover:text-primary cursor-pointer focus-visible:ring-1 focus-visible:ring-brand-lime outline-none bg-transparent border-none p-0"
-				>
+				</span>
+				<span className="text-[10px] font-bold uppercase tracking-widest text-background/60">
 					TIME: UTC-3
-				</button>
+				</span>
 			</div>
 		</footer>
 	);
